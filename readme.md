@@ -4,6 +4,8 @@
 #### single node config
 1. cluster.name: es-dce-scc
 2. node.name:
+    - For our **LOVELY Sanjay**: set value for each server with md0, md1, md2. We will have to do 3 scc and 3 gcc as single master and data node in gcc will not work (?)
+    - More about node types: https://www.elastic.co/guide/en/elasticsearch/reference/current/modules-node.html
     - md-node: master and data node
     ````
     node.master: true
@@ -35,4 +37,6 @@
 6. network.publish_host: 192.168.1.29
     - Publish address, if this is not set it will take one of network.host which it thinks the best. So we need to set it if we have multiple network.host binding
     - For our **LOVELY Sanjay**: Replace this with each server host name/ip, it should be in the discovery.seed_hosts
-    
+7. **NO LONGER NEEDED** discovery.zen.minimum_master_nodes
+    - In version 7 elastic auto manages the size of the voting set of master nodes itself. So even if you set it, it will gets ignored.
+    - Read more: https://discuss.elastic.co/t/avoid-split-brain-with-new-elasticsearch-7-0-after-discovery-zen-minimum-master-nodes-removal/176877
