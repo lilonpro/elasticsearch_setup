@@ -1,6 +1,7 @@
 # Elasticsearch and Kibana setup
 ## Elasticsearch setup
 ### elasticsearch.yml
+#### single node config
 1. cluster.name: es-dce-scc
 2. node.name:
     - md-node: master and data node
@@ -24,3 +25,6 @@
     - https://www.elastic.co/guide/en/elasticsearch/reference/7.4/discovery-settings.html
     - _local_: localhost
     - _site_: server ip address
+#### Settting up cluster
+4. discovery.seed_hosts: masterIp0:port, masterIp1:port
+    - This is this list of all master (eligable) node, for the sake of simplicity lets put ip and port on in here
