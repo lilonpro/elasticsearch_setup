@@ -35,3 +35,4 @@
 6. network.publish_host: 192.168.1.29
     - Publish address, if this is not set it will take one of network.host which it thinks the best. So we need to set it if we have multiple network.host binding
     - For our **LOVELY Sanjay**: Replace this with each server host name/ip, it should be in the discovery.seed_hosts
+    
