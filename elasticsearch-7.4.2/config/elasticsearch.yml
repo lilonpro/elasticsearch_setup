@@ -78,11 +78,10 @@ transport.port: 9300
 # The default list of hosts is ["127.0.0.1", "[::1]"]
 #
 discovery.seed_hosts: 192.168.1.29:9300, 192.168.1.2:9300
-cluster.initial_master_nodes: md0,md1
 #
 # Bootstrap the cluster using an initial set of master-eligible nodes:
 #
-#cluster.initial_master_nodes: ["node-1", "node-2"]
+cluster.initial_master_nodes: md0,md1
 #
 # For more information, consult the discovery and cluster formation module documentation.
 #
