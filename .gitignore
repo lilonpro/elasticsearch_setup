@@ -1,0 +1,13 @@
+# Ignore everything
+elasticsearch-7.4.2/bin
+elasticsearch-7.4.2/data
+elasticsearch-7.4.2/jdk
+elasticsearch-7.4.2/logs
+elasticsearch-7.4.2/modules
+elasticsearch-7.4.2/plugins
+elasticsearch-7.4.2/lib
+elasticsearch-7.4.2/LICENSE.txt
+elasticsearch-7.4.2/NOTICE.txt
+elasticsearch-7.4.2/README.textile
+
+kibana-7.4.2
