@@ -40,3 +40,17 @@
 7. **NO LONGER NEEDED** discovery.zen.minimum_master_nodes
     - In version 7 elastic auto manages the size of the voting set of master nodes itself. So even if you set it, it will gets ignored.
     - Read more: https://discuss.elastic.co/t/avoid-split-brain-with-new-elasticsearch-7-0-after-discovery-zen-minimum-master-nodes-removal/176877
+#### Setting up TLS
+Ref.: https://www.elastic.co/guide/en/elasticsearch/reference/7.4/configuring-tls.html
+8. Run command to generated the certificate into config folder. Keep a note for the keyphase. The keyphrase for the sample is dce2020
+````
+.\elasticsearch-7.4.2\bin\elasticsearch-certutil cert
+````
+9. Enable security and set cert path
+````
+xpack.security.enabled: true
+xpack.security.transport.ssl.enabled: true
+xpack.security.transport.ssl.verification_mode: certificate 
+xpack.security.transport.ssl.keystore.path: certs/elastic-certificates.p12 
+xpack.security.transport.ssl.truststore.path: certs/elastic-certificates.p12 
+````
