@@ -54,3 +54,8 @@ xpack.security.transport.ssl.verification_mode: certificate
 xpack.security.transport.ssl.keystore.path: certs/elastic-certificates.p12 
 xpack.security.transport.ssl.truststore.path: certs/elastic-certificates.p12 
 ````
+10. Add cert passphrase to keystore by running following command. The key store will be default to config/elasticsearch.keystore
+````
+bin/elasticsearch-keystore add xpack.security.transport.ssl.keystore.secure_password
+bin/elasticsearch-keystore add xpack.security.transport.ssl.truststore.secure_password
+````
