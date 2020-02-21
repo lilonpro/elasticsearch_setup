@@ -28,3 +28,5 @@
 #### Settting up cluster
 4. discovery.seed_hosts: masterIp0:port, masterIp1:port
     - This is this list of all master (eligable) node, for the sake of simplicity lets put ip and port on in here
+    - For our **LOVELY Sanjay**: Replace following list with the server host name list in elasticsearch.yml
+    - 192.168.1.29:9300, 192.168.1.2:9300

@@ -55,21 +55,26 @@ node.data: true
 #
 # Set the bind address to a specific IP (IPv4 or IPv6):
 #
-network.host: _local_
-#,_site_
+network.host: _local_,_site_
 #
 # Set a custom port for HTTP:
 #
-#http.port: 9200
+http.port: 9200
 #
 # For more information, consult the network module documentation.
 #
+#---------------------------------- Transport setup ---------------------------
+#
+# We don't actually need to set this up as it has a default range and auto 
+# assign one that is available. Also other node will scan the port range for
+# disocvery host connection. Here we set it in case we want to do server hardenning
+transport.port: 9300
 # --------------------------------- Discovery ----------------------------------
 #
 # Pass an initial list of hosts to perform discovery when this node is started:
 # The default list of hosts is ["127.0.0.1", "[::1]"]
 #
-#discovery.seed_hosts: ["host1", "host2"]
+discovery.seed_hosts: [192.168.1.29:9300, 192.168.1.2:9300]
 #
 # Bootstrap the cluster using an initial set of master-eligible nodes:
 #
