@@ -1,7 +1,6 @@
 # Elasticsearch and Kibana setup
 ## Elasticsearch setup
 ### elasticsearch.yml
-#### single node config
 1. cluster.name: es-dce-scc
 2. node.name:
     - For our **LOVELY Sanjay**: set value for each server with md0, md1, md2. We will have to do 3 scc and 3 gcc as single master and data node in gcc will not work (?)
@@ -86,3 +85,14 @@ Changed password for user [beats_system]
 Changed password for user [remote_monitoring_user]
 Changed password for user [elastic]
 ````
+12. Verify you can access localhost:9200 with user elastic and the password you just set.
+## Kibana setup
+### config/kibana.yml
+13. server.host: Kibana running server host names
+    - - For our **LOVELY Sanjay**: Replace this with the host name of where kibana is running
+14. elasticsearch.hosts: urls of all elastic search nodes (See elastic config for host and port)
+    - - For our **LOVELY Sanjay**: Replace this with the server urls
+15. Elastic user name and passwrod for kibana. Password was set in step 11.
+    - elasticsearch.username: "kibana"
+    - elasticsearch.password: "dce2020": 
+16. Kiabana will be up and running on port 5601. **NOTE" you will only be able to access Kibana with whatever you set in server.host

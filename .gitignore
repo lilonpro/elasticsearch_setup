@@ -10,4 +10,19 @@ elasticsearch-7.4.2/LICENSE.txt
 elasticsearch-7.4.2/NOTICE.txt
 elasticsearch-7.4.2/README.textile
 
-kibana-7.4.2
+kibana-7.4.2/.nodegit_binaries
+kibana-7.4.2/bin
+kibana-7.4.2/built_assets
+kibana-7.4.2/data
+kibana-7.4.2/node
+kibana-7.4.2/node_modules
+kibana-7.4.2/optimize
+kibana-7.4.2/plugins
+kibana-7.4.2/src
+kibana-7.4.2/webpackShims
+kibana-7.4.2/x-pack
+kibana-7.4.2/.i18nrc.json
+kibana-7.4.2/LICENSE.txt
+kibana-7.4.2/NOTICE.txt
+kibana-7.4.2/package.json
+kibana-7.4.2/README.txt
