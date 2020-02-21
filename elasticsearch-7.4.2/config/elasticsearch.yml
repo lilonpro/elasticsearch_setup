@@ -61,6 +61,9 @@ network.host: _local_,_site_
 #
 http.port: 9200
 #
+# Publish address, if this is not set it will take one of network.host which it thinks the best.
+# So we need to set it if we have multiple network.host binding
+network.publish_host: 192.168.1.29
 # For more information, consult the network module documentation.
 #
 #---------------------------------- Transport setup ---------------------------
@@ -75,6 +78,7 @@ transport.port: 9300
 # The default list of hosts is ["127.0.0.1", "[::1]"]
 #
 discovery.seed_hosts: 192.168.1.29:9300, 192.168.1.2:9300
+cluster.initial_master_nodes: md0,md1
 #
 # Bootstrap the cluster using an initial set of master-eligible nodes:
 #

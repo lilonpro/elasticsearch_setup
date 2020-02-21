@@ -30,3 +30,8 @@
     - This is this list of all master (eligable) node, for the sake of simplicity lets put ip and port on in here
     - For our **LOVELY Sanjay**: Replace following list with the server host name list in elasticsearch.yml
     - 192.168.1.29:9300, 192.168.1.2:9300
+5. cluster.initial_master_nodes: md0,md1
+    - The node names of master (eligable) nodes (read more if you prefer)
+6. network.publish_host: 192.168.1.29
+    - Publish address, if this is not set it will take one of network.host which it thinks the best. So we need to set it if we have multiple network.host binding
+    - For our **LOVELY Sanjay**: Replace this with each server host name/ip
